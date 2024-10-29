@@ -1,0 +1,21 @@
+20
+Artichoke 2.47
+Asparagus 2.95
+Avocados 2.68
+Broccoli 2.92
+Cabbage 0.80
+Carrots 0.98
+Celery 2.49
+Corn 2.23
+Cucumbers 1.25
+Kale 3.43
+Lettuce 3.28
+Mushrooms 3.90
+Okra 5.16
+Onions 1.11
+Potatoes 0.83
+Radish 1.82
+Spinach 4.12
+Tomatoes 2.19
+Turnips 2.9
+Zucchini 1.64

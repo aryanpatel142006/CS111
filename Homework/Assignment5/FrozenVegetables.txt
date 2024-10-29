@@ -1,0 +1,13 @@
+12
+Asparagus 6.82
+Beans 2.00
+Broccoli 2.35
+Carrots 1.73
+Cauliflower 2.40
+Corn 1.69
+Kale 2.30
+Okra 2.26
+Peas 2.00
+Potatoes 1.92
+Spinach 2.28
+Turnip 2.52

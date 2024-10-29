@@ -1,0 +1,7 @@
+6
+Berries 4.27
+Blackberries 4.83
+Blueberries 3.82
+Peaches 3.61
+Raspberries 6.16
+Strawberries 3.34

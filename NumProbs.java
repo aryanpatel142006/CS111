@@ -91,4 +91,12 @@ public class NumProbs {
 
     }
 
+    // recursive counting the number of digits
+
+    public static int recursiveNumberOfDigits ( int n ){
+        if ( n == 0) return 0; // Base Case
+        int count = 1 + recursiveNumberOfDigits(n/10);
+        return count;
+    }
+
 }

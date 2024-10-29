@@ -1,0 +1,7 @@
+6
+Apricots 2.24
+Cherries 5.24
+Cocktail 2.10
+Peaches 2.01
+Pears 2.09
+Pineapple 1.78

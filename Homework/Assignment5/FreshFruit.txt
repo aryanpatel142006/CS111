@@ -1,0 +1,25 @@
+24
+Apples 1.85
+Apricots 3.61
+Bananas 0.60
+Blackberries 6.75
+Blueberries 4.16
+Cantaloupe 0.75
+Cherries 4.66
+Clementines 1.58
+Grapefruit 1.44
+Grapes 2.04
+Honeydew 1.16
+Kiwi 2.61
+Mangoes 1.47
+Nectarines 2.37
+Oranges 1.46
+Papaya 1.34
+Peaches 2.18
+Pears 1.85
+Pineapple 0.62
+Plum 2.53
+Pomegranate 2.47
+Raspberries 7.73
+Strawberries 2.97
+Watermelon 0.38

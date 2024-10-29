@@ -29,6 +29,9 @@ public class Client {
 
         NumProbs.printN(4);
 
+        // iterative number of digits 
+        StdOut.println("number of digits: " + NumProbs.recursiveNumberOfDigits(1234444444));
+
     }
 
 
