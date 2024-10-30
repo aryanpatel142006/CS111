@@ -35,6 +35,9 @@ public class FruitCosts {
             cheapest2 = cheapest1;
             price1 = price;
             cheapest1 = name;
+        }else if (price < price2){
+            price2 = price;
+            cheapest2 = name;
         }
     }
 	
