@@ -25,5 +25,33 @@ public class CharacterCounter {
 	// WRITE YOUR CODE HERE
 
 
+	int [] arr = new int [128]; // iniatialization of array
+	double COUNTER = 0;
+
+	while ( StdIn.hasNextChar() ) {
+		//incrementing counter
+		COUNTER += 1;
+		
+		// iniatilizing character and ascii value
+		char character = StdIn.readChar();
+		int ascii = (int)character;
+
+		// incrementing the number of occurences in the array
+		arr[ascii] += 1;
+	}
+
+	/*
+	* Printing output
+	* [character],[ascii value],[occurrences],[frequency]
+	* NO SPACE before or after the comma.
+	*/
+
+	for ( int i = 32; i <= 126; i++){
+		double frequency = (arr[i]/COUNTER)*100;
+		StdOut.print((char)i + ",");
+		StdOut.print(i + ",");
+		StdOut.print(arr[i] + ",");
+		StdOut.println(frequency);
+	}
     }
 }
