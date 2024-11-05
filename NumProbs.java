@@ -99,4 +99,16 @@ public class NumProbs {
         return count;
     }
 
+
+    public static int findSum(int A[], int i) {
+        
+        // base caseL i is at the last index of the
+
+        if ( i == A.length-1) {
+            return A[i];
+        }
+
+        int sum = A[i] + findSum(A, i+1);
+        return sum;
+    }
 }

@@ -32,6 +32,11 @@ public class Client {
         // iterative number of digits 
         StdOut.println("number of digits: " + NumProbs.recursiveNumberOfDigits(1234444444));
 
+        int[] arrayOfInts = {4,1,9,7};
+
+        System.out.println("Sumn of Array " + NumProbs.findSum(arrayOfInts, 0));
+
+
     }
 
 
