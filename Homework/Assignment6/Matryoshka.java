@@ -23,7 +23,7 @@ public class Matryoshka {
         StdDraw.arc(head_x,head_y-((1.0/6.0)*radius),((1.0/8.0)*radius),180,360);
 
     }
-    /**
+    /****
      * Draws a circle as the doll body using the specified x,y and radius values,
      * Draws another circle of 1/2 times the size placed on top of body as the 'head',
      * Calls helper method drawFace with the x,y coordinates that are the center of the 'head' circle and body radius.
@@ -34,6 +34,9 @@ public class Matryoshka {
      */
     public static void drawDoll(double x, double y, double radius){
         //WRITE YOUR CODE HERE
+        StdDraw.circle(x,y,radius); // doll's body
+        StdDraw.circle(x, y+radius+radius/2, radius/2); // doll's head
+        drawFace(x, y+radius+radius/2, radius);
     }
 
      /**
@@ -48,6 +51,16 @@ public class Matryoshka {
      */
     public static void stackDolls(double x, double y, double r, int dolls){
         //WRITE YOUR CODE HERE
+
+        // below line is for testing 
+        // StdOut.println("x: " + x + "y: " + y);
+
+        if ( dolls <= 0 ){ // base case
+            return;
+        }
+        drawDoll(x, y, r); // print the doll
+        stackDolls( x + ( r+(r*5/7) ), y, r*5/7,dolls-1); // recursive function
+    
     }
 
     /**
@@ -58,5 +71,7 @@ public class Matryoshka {
      */
     public static void main(String[] args){
         //WRITE YOUR CODE HERE
+        int numberOfDolls = Integer.parseInt(args[0]);
+        stackDolls(0.1, 0.1, 0.1, numberOfDolls);
     }
 }
