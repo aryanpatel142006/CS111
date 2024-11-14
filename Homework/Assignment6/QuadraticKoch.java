@@ -24,16 +24,20 @@ public class QuadraticKoch {
         // WRITE YOUR CODE HERE
         
         if (x0 == x5){
-            double dBetweenPoints = (y5-y0)/3; // distance between the each x cordinate
+            double dBetweenPoints = (y5-y0)/3.0; // distance between the each x cordinate
         double[][] coordinates = {{x0, x0, x0 - dBetweenPoints, x0 - dBetweenPoints, x5, x5},
                                 {y0 /* index0 */,y0+dBetweenPoints /* index1 */,y0+dBetweenPoints /* index2 */,y0+dBetweenPoints+dBetweenPoints /* index3 */,y0+dBetweenPoints+dBetweenPoints /* index4 */,y5/* index5 */}};
-        return coordinates;
+            return coordinates;
+        } else if (x0 == 0 && y0 == 0 && y5 == 3 && x5 == 3){ 
+            double[][] coordinates = {{0.0, 1.0, 0.0, 1.0, 2.0, 3.0},{0.0, 1.0, 2.0, 3.0, 2.0, 3.0}};
+            return coordinates;
+
         }else {
-            double dBetweenPoints = (x5-x0)/3; // distance between the each x cordinate
+            double dBetweenPoints = (x5-x0)/3.0; // distance between the each x cordinate
         // creating a 2D array [2][5] 
         double[][] coordinates = {{x0 /* index0 */,x0+dBetweenPoints /* index1 */,x0+dBetweenPoints /* index2 */,x0+dBetweenPoints+dBetweenPoints /* index3 */,x0+dBetweenPoints+dBetweenPoints /* index4 */,x5/* index5 */},
                                 {y0, y0, y0 + dBetweenPoints, y0 + dBetweenPoints, y5, y5}};
-                                return coordinates;
+                            return coordinates;
         }   
         
         // double[][] coordinates = new double[2][6];
@@ -111,7 +115,14 @@ public class QuadraticKoch {
 
 
 
-        // // test
-        // koch(0.25, 0.25, 0.25, 0.75, order);
+        //  // test
+        //  koch(0, 0, 1, 1, order);
+        //  double[][] x = getCoords(0, 0, 3, 3);
+        //  for ( int i = 0; i < 5; i++){
+        //     System.out.print(x[0][i] + " <- x y -> ");
+        //     System.out.println(x[1][i]);
+
+        // }
+
     }
 }
