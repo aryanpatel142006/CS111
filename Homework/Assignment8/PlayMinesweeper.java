@@ -185,15 +185,17 @@ public class PlayMinesweeper {
             int j = col;
             if (grid[row][col].getSqNum() == -1){ 
                 //StdOut.println("MINE BOOOOMMM!!!!!");
+                if (grid[row][col].getSqState() == State.FLAGGED) flagCount-=1;
                 grid[row][col].setSqState(State.OPEN);
                 return false; // condition when square has mine
             }else if (grid[row][col].getSqNum() > 0){
                 //if (grid[row][col].getSqState() == State.FLAGGED) flagCount-=1;
+                if (grid[row][col].getSqState() == State.FLAGGED) flagCount-=1;
                 grid[row][col].setSqState(State.OPEN);
                 //StdOut.println("OPENEDDDDDDDDD!!!!!");
                 return true;
             } else if (grid[row][col].getSqNum() == 0){ // condition when square is empty => sqNo is 0
-                //if (grid[row][col].getSqState() == State.FLAGGED) flagCount-=1;
+                if (grid[row][col].getSqState() == State.FLAGGED) flagCount-=1;
                 grid[row][col].setSqState(State.OPEN);
                 
 

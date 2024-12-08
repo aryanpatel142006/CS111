@@ -73,7 +73,8 @@ public class RURacing {
      * 
      * NOTE: If you require a refresher on 2D arrays, check out the following:
      * https://introcs.cs.rutgers.edu/lectures/
-     * https://introcs.cs.princeton.edu/java/14array/.
+     * https://introcs.cs.princp\;>
+     * \eton.edu/java/14array/.
      * 
      * @param x1  Specifies x-coordinate for the first point.
      * @param y1  Specifies y-coordinate for the first point.
@@ -234,6 +235,7 @@ public class RURacing {
      * @return
      */
     public static void racer1(char[][] map) {
+        moveRacer(0,0,16,map);
 	// WRITE YOUR CODE HERE
     }
 
