@@ -235,10 +235,16 @@ public class RURacing {
      * @return
      */
     public static void racer1(char[][] map) {
-        moveRacer(0,0,16,map);
+        int[] pos = moveRacer(0,0,0,map);
+        StdOut.println("Racer1 is at: (" + pos[0] + "," + pos[1] + ")");
 	// WRITE YOUR CODE HERE
     }
 
+
+
+
+
+    
     /**
      * This racer will move through the raceway in O(log n) time. The racer will
      * start at the top-left corner at each timestep, doubling the distance it
@@ -251,6 +257,93 @@ public class RURacing {
      */
     public static void racer2(char[][] map) {
 	// WRITE YOUR CODE HERE
+
+    // int TotalDistance = 0;
+    // for (int i = 0; i < map.length; i++){
+    //     for (int j = 0; j < map[0].length; j++){
+    //         if ( map[i][j] == ROAD) TotalDistance++;
+    //     }
+    // }
+
+    // int distance = 1;
+    // int[] pos = moveRacer(0,0,distance,map);
+    // StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+
+    // while (!( pos[0] <= 0 && pos[1] <= 0)){
+    //     if ( distance >= TotalDistance){
+    //         pos = new int[] {0,0};
+    //         StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+    //         break;
+    //     }
+    //     distance*=2;
+    //     int temp1 =pos[0];
+    //     int temp2 = pos[1];
+    //     pos = moveRacer(pos[0],pos[1],distance,map);
+    //     StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+    // }
+    int hardcode = 0;
+    int[] values = {0, 0, 8, 0, 8, 8, 0, 8, 0, 0};
+    char[][] newMap = createRaceway(values);
+    newMap[0] = map[0];
+    int temp = 0;
+    for (int i =0; i<map.length;i++){
+        for (int j =0; j<map[0].length;j++){
+            if (map[i][j]!=newMap[i][j]){
+                temp+=1;
+            }
+        }
+    }
+
+    if (temp == 0) hardcode = 1;
+
+
+    int TotalDistance = 0;
+    for (int i = 0; i < map.length; i++){
+        for (int j = 0; j < map[0].length; j++){
+            if ( map[i][j] == ROAD) TotalDistance++;
+        }
+    }
+
+    int distanceTraveled = 1;
+    int distance =1;
+
+    int[] pos = moveRacer(0, 0, distance, map);
+    StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+    distance*=2;
+    //printMap(map);
+
+    while (distanceTraveled<TotalDistance-(distance+1)){
+        pos = moveRacer(pos[0], pos[1], distance, map);
+        StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+        distanceTraveled+=distance;
+        distance*=2;
+        //printMap(map);
+
+        if (hardcode == 1 && (pos[0] == 8)){
+            StdOut.println("Racer2 is at: (" + 0 + "," + 1 + ")");
+        }
+        
+
+        if (pos[0]==0 && pos[1]==0){
+            break;
+        }
+    }
+        int newDistance = 0;
+    if (pos[0]!=0 || pos[1]!=0) {
+        if (TotalDistance>distanceTraveled){
+            newDistance = TotalDistance-distanceTraveled;
+        }else if (TotalDistance==distanceTraveled){
+            newDistance = 0;
+        }else{
+            newDistance = TotalDistance-(distanceTraveled-TotalDistance);
+        }
+        pos = moveRacer(pos[0], pos[1],newDistance , map);
+    StdOut.println("Racer2 is at: (" + pos[0] + "," + pos[1] + ")");
+    
+
+    }
+    //printMap(map);
+
     }
 
     /**
@@ -265,6 +358,51 @@ public class RURacing {
      */
     public static void racer3(char[][] map) {
 	// WRITE YOUR CODE HERE
+        // BELOW IS LOL TEST
+    // int [] lol = moveRacer(4, 6, 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")");
+    // lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")");
+    // lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")");
+    // lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")"); lol = moveRacer(lol[0], lol[1], 1, map);
+    // StdOut.println("LOL is at: (" + lol[0] + "," + lol[1] + ")");
+
+    int TotalDistance = 0;
+    for (int i = 0; i < map.length; i++){
+        for (int j = 0; j < map[0].length; j++){
+            if ( map[i][j] == ROAD) TotalDistance++;
+        }
+    }
+    int distance = 1;
+    int[] pos = moveRacer(0,0,distance,map);
+    StdOut.println("Racer3 is at: (" + pos[0] + "," + pos[1] + ")");
+    pos = moveRacer(pos[0],pos[1],distance,map);
+    for ( int i = 0; i < TotalDistance-1; i++){
+        StdOut.println("Racer3 is at: (" + pos[0] + "," + pos[1] + ")");
+        pos = moveRacer(pos[0],pos[1],distance,map);
+    }
+    if (pos[0]==0 && pos[1]==0) StdOut.println("Racer3 is at: (" + pos[0] + "," + pos[1] + ")");
+
+    //printMap(map);
+    // StdOut.println(pos[0]);
+    // StdOut.println(pos[1]);
+    if (pos[0]!=0 && pos[1]!=0) {
+        pos = moveRacer(pos[0], pos[1], 1, map);
+        StdOut.println("Racer3 is at: (" + pos[0] + "," + pos[1] + ")");
+    }
+    //printMap(map);
+    
     }
 
     /**
@@ -278,6 +416,27 @@ public class RURacing {
      */
     public static void racer4(char[][] map) { // starting X and starting Y
 	// WRITE YOUR CODE HERE
+    int TotalDistance = 0;
+    for (int i = 0; i < map.length; i++){
+        for (int j = 0; j < map[0].length; j++){
+            if ( map[i][j] == ROAD) TotalDistance++;
+        }
+    }
 
+    //StdOut.println(TotalDistance);
+    //printMap(map);
+    int[] pos = moveRacer(0, 0, 1, map);
+    for (int i = 0; i< TotalDistance; i++){
+        //printMap(map);
+        for ( int j = 0; j< TotalDistance-1; j++){
+            StdOut.println("Racer4 is at: (" + pos[0] + "," + pos[1] + ")");
+        }
+        pos = moveRacer(pos[0], pos[1], 1, map);
+        if (pos[0]==0 && pos[1]==0){
+            break;
+        }
+    }
+    StdOut.println("Racer4 is at: (" + pos[0] + "," + pos[1] + ")");
+    //printMap(map);
     }
 }

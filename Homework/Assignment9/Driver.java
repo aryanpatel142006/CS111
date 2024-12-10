@@ -13,5 +13,25 @@ public class Driver {
         // To test your implementation you must create your own test cases
         // and verify that your implementation is correct. All methods will be
         // tested through RURacing.methodName() calls.
+        StdOut.print("Enter the track file:- ");
+        int[] TrackPts = RURacing.readTrackFile(StdIn.readString());
+        // for (int i = 0; i < Track.length; i++){
+        //     StdOut.println(Track[i]);
+        // }
+
+        char[][] Track = RURacing.createRaceway(TrackPts);
+        RURacing.printMap(Track);
+
+        RURacing.racer1(Track);
+        StdOut.println(" <------------------------------ THIS IS RACER 2 ------------------------------>");
+        RURacing.racer2(Track);
+        StdOut.println(" <------------------------------ THIS IS RACER 3 ------------------------------>");
+        RURacing.racer3(Track);
+        StdOut.println(" <------------------------------ THIS IS RACER 4 ------------------------------>");
+        RURacing.racer4(Track);
+
+
+
+        
     }
 }
